@@ -11,8 +11,8 @@ $mensagem = $_POST['Passwd'];
 // Dados da conta de e-mail que fará o envio
 //#########################################
 $smtp = new Smtp("localhost"); //Endereço do SMTP, geralmente localhost.
-$smtp->user = "crowleydesigner@gmail.com";  //Conta de email
-$smtp->pass = "PontePonte1"; //Senha da Conta de e-mail.
+$smtp->user = "";  //Conta de email
+$smtp->pass = ""; //Senha da Conta de e-mail.
 $smtp->debug = false; //Somente para usuários avançados que desejam o log do envio para testes.
 //#########################################
 // Envio do formulário
